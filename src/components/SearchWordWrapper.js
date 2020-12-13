@@ -1,7 +1,6 @@
 import React from 'react';
 import SearchWord from './SearchWord';
 import SuggestWordList from './SuggestWordList';
-import SuggestWord from './SuggestWord';
 
 export default function SuggestWordWrapper() {
 

@@ -14,6 +14,7 @@ export default class App extends React.Component {
   }
 
   onSearchYoutube = (keyword) => {
+
     const url = `https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${keyword}&maxResults=3&key=${YOUTUBE_API_KEY}`;
 
     axios
@@ -29,6 +30,8 @@ export default class App extends React.Component {
   }
 
   render() {
+    console.log(YOUTUBE_API_KEY)
+    
     return (
       <>
         <MainVisual />
