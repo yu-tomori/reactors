@@ -1,7 +1,10 @@
 import React from 'react';
 import axios from 'axios';
-import Header from './components/Header';
-import Youtube from './components/Youtube';
+// import Header from './components/Header';
+// import Youtube from './components/Youtube';
+import MainVisual from './components/MainVisual'
+import SearchForm from './components/SearchForm';
+import ResultList from './components/ResultList';
 
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
@@ -28,9 +31,12 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <Header onSearchYoutube={this.onSearchYoutube} />
+        <MainVisual />
+        {/* <Header onSearchYoutube={this.onSearchYoutube} /> */}
+        <SearchForm onSearchYoutube={this.onSearchYoutube} />
         {/* 追加 */}
-        <Youtube videos={this.state.videos} />
+        {/* <Youtube videos={this.state.videos} /> */}
+        <ResultList videos={this.state.videos} />
       </>
     )
   }
