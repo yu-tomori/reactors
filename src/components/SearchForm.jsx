@@ -1,26 +1,31 @@
 import React from 'react';
+import _ from 'lodash';
 
-export class SearchForm extends React.Component{
-  constructor(props) {
-    super(props);
-    this.state = {value: ""}
 
-    this.handleChange = this.handleChange.bind(this);
+export default class SearchForm extends React.Component{
+
+  state = {
+    keyword: "",
   }
   
-  handleChange(event) {
-    this.setState({value: event.target.value});
+  handleChangeInput = (e) => {
+    this.setState({keyword: e.target.value});
+    this._debounce(e.target.value)
   }
+
+  _debounce = _.debounce(value => {
+    this.props.onSerchYoutube(value);
+  },200);
+
+
   
   render() {
     return(
       <div className="SearchForm">
         <div className="SerachWordWapper flex">
           <input 
-            type="text" 
-            value={this.state.value} 
-            onChange={this.handleChange}
-            placeholder="テキストを入力"
+            onChange={this.handleChangeInput}
+            value={this.state.keyword}
           />
           <p className="cancel">キャンセル</p>
         </div>
@@ -35,9 +40,4 @@ export class SearchForm extends React.Component{
       </div>
     );
   }
-
-  // handleChange(){
-  //   const handleChange = (event) => SetSearchWordText(event.target.value);
-  // }
-
 }
