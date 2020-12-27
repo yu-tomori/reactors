@@ -24,6 +24,12 @@ export default class App extends React.Component {
     ],
   }
 
+  setVideos = (newVideos) => {
+    this.setState({
+      videos: newVideos,
+    });
+  }
+
   onSearchYoutube = (keyword) => {
 
     const url = `https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${keyword}&maxResults=3&key=${YOUTUBE_API_KEY}`;
@@ -46,7 +52,7 @@ export default class App extends React.Component {
       <>
         <MainVisual />
         {/* <Header onSearchYoutube={this.onSearchYoutube} /> */}
-        <SearchForm onSearchYoutube={this.onSearchYoutube} />
+        <SearchForm onSearchYoutube={this.onSearchYoutube} setVideos={this.setVideos} />
         {/* 追加 */}
         {/* <Youtube videos={this.state.videos} /> */}
         <ResultList videos={this.state.videos} />

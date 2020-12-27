@@ -1,30 +1,15 @@
-import React from 'react';
-import SearchConsole from './SearchConsole';
+import React, {useState } from 'react';
+// import SearchConsole from './SearchConsole';
 import SuggestWordList from './SuggestWordList';
 
 export default function SuggestWordWrapper() {
+  const [word, setWord] = useState("cat");
 
-    const searchWord='cat';
-
-//   onSearchYoutube = (keyword) => {
-//     const url = `https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${keyword}&maxResults=3&key=${YOUTUBE_API_KEY}`;
-
-//     axios
-//       .get(url)
-//       .then(response => {
-//           this.setState({
-//             videos: response.data.items,
-//           });
-//       })
-//       .catch(() => {
-//           console.log('通信に失敗しました');
-//       });
-//   }
-
-    return (
-      <>
-        <SearchConsole />
-        <SuggestWordList searchWord={searchWord}/>
-      </>
-    )
+  return (
+    <>
+      <p>Word is {word}</p>
+      <input type="text" onInput={(e) => setWord(e.target.value)} />
+      <SuggestWordList searchWord={word} />
+    </>
+  )
 }
