@@ -1,21 +1,13 @@
 import React from 'react';
 import axios from 'axios';
-// components
-import SearchForm from './components/SearchForm';
-// import ResultList from './components/ResultList';
-import Youtube from './components/Youtube';
-
-import './index.css';
-
+import SearchWordWrapper from './SearchWordWrapper';
+// import SearchServiceList from './SearchServiceList';
 
 const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
-export default class App extends React.Component {
-  state = {
-    videos: [],
-  }
+export default class SearchForm extends React.Component {
 
-  onSerchYoutube = (keyword) => {
+  onSearchYoutube = (keyword) => {
     const url = `https://www.googleapis.com/youtube/v3/search?type=video&part=snippet&q=${keyword}&maxResults=3&key=${YOUTUBE_API_KEY}`;
 
     axios
@@ -33,9 +25,8 @@ export default class App extends React.Component {
   render() {
     return (
       <>
-        <SearchForm onSerchYoutube={this.onSerchYoutube} />
-        
-        <Youtube videos={this.state.videos}/>
+        <SearchWordWrapper />
+        {/* <SearchServiceList /> */}
       </>
     )
   }

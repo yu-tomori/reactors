@@ -1,66 +1,13 @@
-/* common */
-.flex{
-    display: flex;
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-.Dummyimg{
-    background-color: #8d8d8d;
-    width: 100%;
-    min-height: 100px;
-}
-/* app */
-.app{
-    max-width: 400px;
-    margin: 0 auto;
-    background-color: #f7f7f7;
-}
-/* -MainVisual */
-/* -SearchForm*/
-.SearchForm{
-    background-color: #fff;
-    box-shadow: 0 2px 1px rgba(0,0,0,0.26)
-}
-/* --SearchWordWrapper */
-.SerachWordWapper{
-    padding: 0 5px;
-}
-.SerachWordWapper input{
-    width: 100%;
-    padding: 3px 5px 3px 10px;
-    background: #dcdcdc;
-    border: none;
-}
-.cancel{
-    display: none;
-}
-/* --SerchServiceList */
-.SerchServiceList{
-    overflow-x: scroll;
-}
-.SerchServiceList::-webkit-scrollbar{
-    display: none;
-}
-.SerchService{
-    padding: 5px 10px;
-    margin: 10px 5px;
-    border-radius: 5px;
-    white-space: nowrap;
-    border: solid 1px #c9c9c9;
-    font-size: 0.75em;
-}
-.SerchService.active{
-    background-color: rgb(17, 255, 255);
-}
-/* -ResultList */
-.ResultList{
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 10px;
-}
-/* --Result */
-.Result{
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 1px rgba(0,0,0,0.26);
-    padding: 5px;
-    margin-bottom: 10px;
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
 }
