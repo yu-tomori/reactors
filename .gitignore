@@ -1,3 +1,6 @@
+# API
+REACT_APP_YOUTUBE_API_KEY = 'AIzaSyAb-luEbOVhFNgt8y8dfQvJbZ7GS68mbpA'
+
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
