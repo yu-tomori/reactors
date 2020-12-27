@@ -10,7 +10,18 @@ const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY;
 
 export default class App extends React.Component {
   state = {
-    videos: [],
+    videos: [
+      new Map([
+        ['title', 'サンプルタイトル'],
+        ['description', 'サンプル説明'],
+        ['url', 'https://youtube.com']
+      ]),
+      new Map([
+        ['title', 'サンプルタイトル2'],
+        ['description', 'サンプル説明2'],
+        ['url', 'https://youtube.com?v=2']
+      ])
+    ],
   }
 
   onSearchYoutube = (keyword) => {

@@ -5,7 +5,7 @@ const Result = (props) => {
         <div className="result-wrapper">
             <p>タイトル: {props.title}</p>
             <p>概要: {props.description}</p>
-            <p>ドメイン: {props.domain}</p>
+            <p>ドメイン: {props.url}</p>
         </div>
     );
 };

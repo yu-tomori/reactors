@@ -1,14 +1,20 @@
 import React from 'react';
 import Result from './Result';
 
-export default class SearchForm extends React.Component {
+export default class ResultList extends React.Component {
+
   render() {
+    console.log(this.props.videos[0].get('title'));
+    const results = this.props.videos.map((vprops, i) => {
+      return (
+        <Result title={vprops.get('title')} description={vprops.get('description')} url={vprops.get('url')} />
+      )
+    })
+
     return (
-      <>
-        <Result title="記事タイトル1" description="概要サンプル1" domain="sample.com" />
-        <Result title="記事タイトル2" description="概要サンプル2" domain="sample1.com" />
-        <Result title="記事タイトル3" description="概要サンプル3" domain="sample2.com" />
-      </>
+      <div className="resut-list">
+        {results}
+      </div>
     )
   }
 }
