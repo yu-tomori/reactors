@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchWord from './SearchWord';
+import SearchConsole from './SearchConsole';
 import SuggestWordList from './SuggestWordList';
 
 export default function SuggestWordWrapper() {
@@ -23,7 +23,7 @@ export default function SuggestWordWrapper() {
 
     return (
       <>
-        <SearchWord />
+        <SearchConsole />
         <SuggestWordList searchWord={searchWord}/>
       </>
     )
